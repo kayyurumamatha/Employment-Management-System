@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Staff</title>
+</head>
+<body>
+
+<h2>Search Staff</h2>
+
+<form method="get">
+    {{ form.as_p }}
+    <input type="submit" value="Search">
+</form>
+
+{% if res %}
+    <h3>Staff Details</h3>
+    <p>Staff ID: {{ res.staffid }}</p>
+    <p>Name: {{ res.name }}</p>
+    <p>Department: {{ res.dept }}</p>
+    <p>Email: {{ res.emailid }}</p>
+    <p>Phone: {{ res.mobno }}</p>
+{% endif %}
+
+</body>
+</html>
